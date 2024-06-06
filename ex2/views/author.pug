@@ -1,0 +1,25 @@
+extends layout
+
+block content
+  h1= `Autor: ${author}`
+  p Identificador do Autor: #{author}
+  p Total de Livros: #{totalBooks}
+  
+  if totalBooks > 0
+    table
+      tr
+        th ID
+        th Title
+        th Publish Date
+        th Pages
+      each book in books
+        tr
+          td: a(href=`/${book._id}`) #{book._id}
+          td #{book.title}
+          td #{book.publishDate}
+          td #{book.pages}
+  else
+    p Nenhum livro encontrado para este autor.
+
+  p
+    a(href='/') Voltar à página principal

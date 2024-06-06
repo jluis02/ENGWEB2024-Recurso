@@ -1,0 +1,33 @@
+extends layout
+
+block content
+  h1= book.title
+  if book.coverImg
+    img(src=book.coverImg, alt=book.title)
+  p
+    | Author:
+    each author in book.author
+      a(href=`/authors/${author}`) #{author}
+      if author != book.author[book.author.length - 1]
+        |, 
+  p Description: #{book.description}
+  p Publisher: #{book.publisher}
+  p Publish Date: #{book.publishDate}
+  p Pages: #{book.pages}
+  p ISBN: #{book.isbn}
+  p Language: #{book.language}
+  p Rating: #{book.rating}
+  p
+    | Genres:
+    each genre in book.genres
+      | #{genre}
+      if genre != book.genres[book.genres.length - 1]
+        |, 
+  p
+    | Characters:
+    each character in book.characters
+      | #{character}
+      if character != book.characters[book.characters.length - 1]
+        |, 
+  p
+    a(href='/') Voltar à página principal
