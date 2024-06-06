@@ -13,6 +13,10 @@
 mongo-seed-1  | 2024-06-06T15:07:15.467+0000	20000 document(s) imported successfully. 0 document(s) failed to import.
 ```
 
+## Frontend
+
+No `http://localhost:17001/authors/:idAutor` usei o nome do autor com `idAutor`.
+
 # Aplicação completa
 
 Para rodar a aplicação basta correr o comando:
