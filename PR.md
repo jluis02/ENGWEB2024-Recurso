@@ -3,7 +3,7 @@
 ## Passos para importação dos dados
 
 1. Começei por adicionar o carater em falta `]` no final do dataset
-2. Corri o script python `normalizer.py` para converter todas as listas em string para arrays, substitiu no `bookId` os espaços e `.` por `_` e remove caracteres de terminadores de linha incomuns.
+2. Corri o script python `normalizer.py` para converter todas as listas em string para arrays, substitiu no `bookId` os espaços e `.` por `_` e removi caracteres de terminadores de linha incomuns.
 3. Troquei o nome do campo do `bookId` para `_id`
 4. Executei o container que já conta com o mongo import
 
